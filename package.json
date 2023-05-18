@@ -14,9 +14,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trukkerweeler/project02-341.git"
+    "url": "git+https://github.com/trukkerweeler/final-341.git"
   },
-  "author": "tim kent",
+  "author": "tim kent, garrett ourth",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
@@ -47,6 +47,6 @@
   },
   "homepage": "https://github.com/trukkerweeler/cse341#readme",
   "keywords": [
-    "lesson04"
+    "finalproject"
   ]
 }
