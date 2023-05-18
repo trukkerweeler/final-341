@@ -1,0 +1,81 @@
+// localhost
+
+###
+GET http://localhost:3000/corrective
+
+###
+GET http://localhost:3000/corrective/645001d610cdcc05d0d04c47
+
+### Create corrective
+POST http://localhost:3000/corrective HTTP/1.1
+Content-Type: application/json
+
+{
+    "corrective_id":"0000011",
+    "description":"Classified records found.",
+    "subject":"REC",
+    "assigned_to":"Joe Buydin",
+    "closed":"N",
+    "created_date":"2023-12-24T08:00:00.000Z",
+    "closed_date":"2023-12-25T08:00:00.000Z"
+}
+
+### PUT contact
+PUT http://localhost:3000/corrective/645040cd968e724a0f1b0cec
+Content-Type: application/json
+
+{
+    "corrective_id":"0000011",
+    "description":"Classified records found.",
+    "subject":"REC",
+    "assigned_to":"Joe RobbinIt Buydin",
+    "closed":"N",
+    "created_date":"2023-12-24T08:00:00.000Z",
+    "closed_date":"2023-12-25T08:00:00.000Z"
+}
+
+
+
+###
+DELETE http://localhost:3000/corrective/645040cd968e724a0f1b0cec
+
+
+
+
+
+// ================Production deployment=======================================
+###
+GET https://web-service-341-project2.onrender.com/corrective
+
+###
+GET https://web-service-341-project2.onrender.com/corrective/6441ab0b150aebeb71bf4032
+
+### Create contact
+POST https://web-service-341-project2.onrender.com/corrective HTTP/1.1
+Content-Type: application/json
+
+{
+    "corrective_id":"0000010",
+    "description":"Records not found.",
+    "subject":"REC",
+    "assigned_to":"TKENT",
+    "closed":"N",
+    "created_date":"2023-12-24T08:00:00.000Z",
+    "closed_date":"2023-12-25T08:00:00.000Z"
+}
+
+### PUT contact
+PUT https://web-service-341.onrender.com/corrective/6441ab0b150aebeb71bf4032
+Content-Type: application/json
+
+{
+    "firstName":"David",
+    "lastName":"Paich",
+    "email":"tambu@email.om",
+    "favoriteColor":"moonlit",
+    "birthday":"2023-01-01T08:00:00.000Z"
+}
+
+###
+DELETE https://web-service-341.onrender.com/corrective/644801aabc59f149bcf0eac5
+
