@@ -6,9 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = process.env.PORT || 3000;
 
-const contactRoutes = require("./routes/contacts");
-const correctiveRoutes = require("./routes/corrective");
-const employeeRoutes = require("./routes/employees");
+
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
 const passport = require('passport');
@@ -31,9 +29,7 @@ app
     next();
   })
 
-  .use("/contacts", contactRoutes)
-  .use("/corrective", correctiveRoutes)
-  .use("/corrective", employeeRoutes)
+ 
   .use('/', require('./routes/index.js'))
   .use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
   .use(cors())
