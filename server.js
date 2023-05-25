@@ -2,8 +2,8 @@ const cors = require('cors');
 const express = require("express");
 const mongodb = require("./db/connect");
 const bodyParser = require("body-parser");
-//test
-const app = express();
+
+const app = new express();
 const port = process.env.PORT || 3000;
 
 
@@ -27,14 +27,11 @@ app
     res.setHeader("Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept, Z-Key, Authorization");
     next();
-  })
-
- 
+  }) 
   .use('/', require('./routes/index.js'))
   .use('api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
   .use(cors())
 
-  // .get("/", (req, res) => {res.send("api assignment");});
 
 passport.use(new githubStrategy({
   clientID: process.env.GITHUB_CLIENT_ID,
@@ -71,8 +68,9 @@ mongodb.initDb((err, mongodb) => {
     console.log(err);
   } else {
     app.listen(port, () => {
-      console.log(`Running and connected on port ${port}`);
+      // console.log(`Running and connected on port ${port}`);
     });
   }
 });
 
+module.exports = app;
