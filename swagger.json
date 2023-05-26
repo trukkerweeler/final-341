@@ -5,7 +5,7 @@
     "description": "Final Project API",
     "version": "1.0.0"
   },
-  "host": "web-service-final.onrender.com",
+  "host": "web-service-final341.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
