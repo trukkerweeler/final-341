@@ -5,10 +5,10 @@
     "description": "Final Project API",
     "version": "1.0.0"
   },
-  "host": "https://web-service-final.onrender.com",
+  "host": "web-service-final.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/login": {
