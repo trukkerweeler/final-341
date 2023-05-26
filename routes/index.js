@@ -15,5 +15,6 @@ routes.get('/logout', function(req, res, next) {
 routes.use('/contacts', require('./contacts'));
 routes.use('/corrective', require('./corrective'));
 routes.use('/employees', require('./employees'));
+routes.use('/nonconformance', require('./nonconformance'));
 
 module.exports = routes;
